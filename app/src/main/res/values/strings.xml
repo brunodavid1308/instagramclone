@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Instagram</string>
+    <string name="auth_failed">Error de autenticación</string>
+    <string name="auth_success">Autenticación correcta</string>
+    <string name="Logout">Cerrar sesión</string>
+    <string name="Ajustes">Ajustes</string>
+    <string name="Subir">Subir imagen</string>
+    <string name="gallery">GaLeria</string>
+    <string name="photo">FOTO</string>
+    <string name="string_open_camera">Abrir cámara</string>
+    <string name="string_next">Continuar</string>
+    <string name="string_share">Compartir</string>
+
+    <!-- Intent Extras -->
+    <string name="calling_activity">calling_activity</string>
+    <string name="selected_image">selected_image</string>
+    <string name="selected_bitmap">selected_bitmap</string>
+    <string name="return_to_fragment">return_to_fragment</string>
+    <string name="intent_user">intent_user</string>
+    <string name="user_stories">user_stories</string>
+
+    <string name="activity_number">activity_number</string>
+    <string name="bundle_photo">bundle_photo</string>
+    <string name="bundle_user_account_settings">bundle_user_account_settings</string>
+
+    <!-- activity names -->
+    <string name="profile_activity">Profile Activity</string>
+    <string name="search_activity">Search Activity</string>
+    <string name="home_activity">Home Activity</string>
+
+    <!-- fragment names -->
+    <string name="edit_profile_fragment">Edit Profile</string>
+    <string name="view_post_fragment">View Post</string>
+    <string name="sign_out_fragment">Sign Out</string>
+    <string name="profile_fragment">Profile</string>
+    <string name="view_profile_fragment">ViewProfile</string>
+    <string name="view_comments_fragment">View Comments</string>
+</resources>
