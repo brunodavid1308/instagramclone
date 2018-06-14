@@ -99,6 +99,7 @@ public class PhotoFragment extends Fragment {
                     getActivity().finish();
                 }catch (NullPointerException e){
                     Log.d(TAG, "onActivityResult: NullPointerException: " + e.getMessage());
+                    Log.d(TAG, "onActivityResult: NullPointerException: " + e.getMessage());
                 }
             }
 
