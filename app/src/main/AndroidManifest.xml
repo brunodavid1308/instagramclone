@@ -56,38 +56,6 @@
         </activity>
         <activity android:name=".Profile.EditProfileActivity"></activity>
 
-        <receiver
-            android:name=".Utils.Gcmreciever"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.example.bruno.instagram" />
-            </intent-filter>
-        </receiver>
-        <service
-            android:name=".Utils.Reciever"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </service>
-        <service
-            android:name=".Utils.Listenerservice"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.gms.iid.InstanceID" />
-            </intent-filter>
-        </service>
-        <receiver
-            android:name=".Utils.ParsePushBroadcast"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.parse.push.intent.RECEIVE" />
-                <action android:name="com.parse.push.intent.DELETE" />
-                <action android:name="com.parse.push.intent.OPEN" />
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>

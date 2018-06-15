@@ -16,9 +16,7 @@ public class Photo implements Parcelable {
     private String image_path;
     private String photo_id;
     private String user_id;
-    private String tags;
     private List<Like> likes;
-    private List<Comment> comments;
 
 
     public Photo() {
@@ -26,15 +24,13 @@ public class Photo implements Parcelable {
     }
 
     public Photo(String caption, String date_created, String image_path, String photo_id,
-                 String user_id, String tags, List<Like> likes, List<Comment> comments) {
+                 String user_id, List<Like> likes) {
         this.caption = caption;
         this.date_created = date_created;
         this.image_path = image_path;
         this.photo_id = photo_id;
         this.user_id = user_id;
-        this.tags = tags;
         this.likes = likes;
-        this.comments = comments;
     }
 
     protected Photo(Parcel in) {
@@ -43,7 +39,6 @@ public class Photo implements Parcelable {
         image_path = in.readString();
         photo_id = in.readString();
         user_id = in.readString();
-        tags = in.readString();
     }
 
     @Override
@@ -53,7 +48,6 @@ public class Photo implements Parcelable {
         dest.writeString(image_path);
         dest.writeString(photo_id);
         dest.writeString(user_id);
-        dest.writeString(tags);
     }
 
     @Override
@@ -72,14 +66,6 @@ public class Photo implements Parcelable {
             return new Photo[size];
         }
     };
-
-    public List<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
-    }
 
     public static Creator<Photo> getCREATOR() {
         return CREATOR;
@@ -125,14 +111,6 @@ public class Photo implements Parcelable {
         this.user_id = user_id;
     }
 
-    public String getTags() {
-        return tags;
-    }
-
-    public void setTags(String tags) {
-        this.tags = tags;
-    }
-
     public List<Like> getLikes() {
         return likes;
     }
@@ -149,7 +127,6 @@ public class Photo implements Parcelable {
                 ", image_path='" + image_path + '\'' +
                 ", photo_id='" + photo_id + '\'' +
                 ", user_id='" + user_id + '\'' +
-                ", tags='" + tags + '\'' +
                 ", likes=" + likes +
                 '}';
     }
