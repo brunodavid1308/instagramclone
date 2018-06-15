@@ -144,18 +144,15 @@ public class ViewProfileFragment extends Fragment {
             public void done(List<ParseObject> objects, ParseException e) {
                 if(e==null) {
                     for(ParseObject object: objects){
-                        //Log.i("info","image found");
                         ParseFile imageFile = (ParseFile)object.get("image");
 
                         Photo photo = new Photo();
 
                         try {
                             photo.setCaption(object.get("descripcion").toString());
-                            //photo.setPhoto_id(object.get("objectId").toString());
                             photo.setUser_id(object.get("username").toString());
                             photo.setDate_created(object.getCreatedAt().toString());
                             photo.setImage_path(imageFile.getUrl());
-                            //Log.i("kj",photo.getImage_path());
                             photos.add(photo);
                         }catch(NullPointerException j){
                             Log.e(TAG, "onDataChange: NullPointerException: " + j.getMessage() );
