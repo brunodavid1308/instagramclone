@@ -58,12 +58,10 @@ public class ViewProfileFragment extends Fragment {
 
 
     //widgets
-    private TextView mPosts, mFollowers, mFollowing, mDisplayName, mUsername, mWebsite, mDescription;
+    private TextView mPosts, mDisplayName, mUsername;
     private ProgressBar mProgressBar;
     private CircleImageView mProfilePhoto;
     private GridView gridView;
-    private Toolbar toolbar;
-    private ImageView profileMenu;
     private BottomNavigationViewEx bottomNavigationView;
     private Context mContext;
     private ImageView mBackArrow;
@@ -80,12 +78,10 @@ public class ViewProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_view_profile, container, false);
         mDisplayName = (TextView) view.findViewById(R.id.display_name);
         mUsername = (TextView) view.findViewById(R.id.username);
-        mDescription = (TextView) view.findViewById(R.id.description);
         mProfilePhoto = (CircleImageView) view.findViewById(R.id.profile_photo);
         mPosts = (TextView) view.findViewById(R.id.tvPosts);
         mProgressBar = (ProgressBar) view.findViewById(R.id.profileProgressBar);
         gridView = (GridView) view.findViewById(R.id.gridView);
-        toolbar = (Toolbar) view.findViewById(R.id.profileToolBar);
         mBackArrow = (ImageView) view.findViewById(R.id.backArrow);
 
         bottomNavigationView = (BottomNavigationViewEx) view.findViewById(R.id.bottomNavViewBar);
@@ -104,12 +100,9 @@ public class ViewProfileFragment extends Fragment {
         }
 
         setupBottonNavigationView();
-        //setupToolbar();
-
         ParseUser currentUser = ParseUser.getCurrentUser();
         checkCurrentUser(currentUser);
         initImageLoader();
-        //setupImageGrid();
         mProgressBar.setVisibility(View.GONE);
         return view;
     }
