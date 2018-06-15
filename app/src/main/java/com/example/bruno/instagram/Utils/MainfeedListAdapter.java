@@ -126,6 +126,7 @@ public class MainfeedListAdapter extends ArrayAdapter<Photo> {
 
 
 
+
         //get the user object
         Log.d(TAG, "getPhotoDetails: retrieving photo details.");
         ParseQuery<ParseUser> query = ParseUser.getQuery();

@@ -160,7 +160,7 @@ public class ViewProfileFragment extends Fragment {
                         }catch(NullPointerException j){
                             Log.e(TAG, "onDataChange: NullPointerException: " + j.getMessage() );
                         }
-                        mPostsCount++;
+                        mPostsCount=objects.size();
                     }
                     mPosts.setText(String.valueOf(mPostsCount));
                     int gridWidth = getResources().getDisplayMetrics().widthPixels;
